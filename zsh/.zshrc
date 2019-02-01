@@ -25,4 +25,6 @@ prompt spaceship
 source /Users/cest-la-vie/fsociety/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /Users/cest-la-vie/fsociety/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export GPG_TTY=$(tty)
+
 SPACESHIP_TIME_SHOW=true
