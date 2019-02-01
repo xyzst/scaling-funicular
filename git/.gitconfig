@@ -1,0 +1,35 @@
+[user]
+	name = Darren Rambaud
+	email = xyzst@users.noreply.github.com
+	signingkey = ADD_SIGNING_KEY_HERE
+
+[alias]
+	# Fetch all new remote branches, and deletes any local branches
+	# that have been deleted from the remote
+	# https://git-scm.com/docs/git-fetch#git-fetch--p
+	prune = fetch --prune
+	
+	# Undo previous commit and keeps file changes
+	# https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
+	undo = reset --soft HEAD^
+
+	# Stash changes from tracked AND untracked files
+	# https://git-scm.com/docs/git-stash
+	stash-all = stash save --include-untracked
+
+[commit]
+	# Ensures all commits are gpg signed
+	# https://help.github.com/articles/about-gpg/
+	# https://git-scm.com/docs/git-config#git-config-commitgpgSign
+	gpgSign = true
+
+[status]
+	# Shows all files under a directory if the directory is untracked
+	# https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
+	showUntrackedFiles = all
+
+[transfer]
+	# Guard against repository corruption
+	# https://git-scm.com/docs/git-config#git-config-transferfsckObjects
+  	# via https://groups.google.com/forum/#!topic/binary-transparency/f-BI4o8HZW0
+	fsckobjects = true
