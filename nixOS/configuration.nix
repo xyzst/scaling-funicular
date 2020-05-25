@@ -96,6 +96,7 @@
         group = "users";
         extraGroups = [
           "wheel"
+          "docker"
         ];
         shell = pkgs.zsh;
         openssh.authorizedKeys.keys = [
@@ -113,5 +114,15 @@
         `--'    `--`--'`--`--`--' `---'  `--`--' `----'  `---'  
                                                                 
       '';
+  };
+
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableNvidia = false;
+      enableOnBoot = true;
+      liveRestore = true;
+      logDriver = "journald";     
+    };
   };
 }
